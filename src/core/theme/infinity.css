@@ -3,6 +3,8 @@
   --color-secondary: #9a4bff;
   --color-accent: #ff007f;
   --color-bg: #0d0e15;
+  --color-surface: #151723;
+  --color-text-muted: rgba(255, 255, 255, 0.62);
   --infinity-gradient: linear-gradient(
     135deg,
     var(--color-primary),
