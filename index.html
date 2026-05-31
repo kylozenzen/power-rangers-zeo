@@ -1,12 +1,16 @@
-export function init(container) {
-  container.innerHTML = `
-    <div style="padding: 20px; text-align: center; margin-top: 50px;">
-      <h1 style="background: var(--infinity-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-        You vs. Gravity
-      </h1>
-      <p style="color: var(--color-text-muted); margin-top: 10px;">
-        The Dashboard is alive.
-      </p>
-    </div>
-  `;
-}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0d0e15" />
+    <meta name="description" content="Nobody Studios Tracker mobile-first PWA" />
+    <title>_Nobody Studios Tracker</title>
+    <link rel="stylesheet" href="/src/core/theme/infinity.css" />
+    <link rel="stylesheet" href="/src/core/theme/global.css" />
+  </head>
+  <body>
+    <div id="app-root"></div>
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>
