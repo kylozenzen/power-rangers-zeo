@@ -1,3 +1,5 @@
+import './core/theme/global.css';
+import './core/theme/infinity.css';
 import { Router } from './core/router.js';
 
 function bootstrap() {
