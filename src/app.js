@@ -1,10 +1,13 @@
 import './core/theme/global.css';
 import './core/theme/infinity.css';
+import { initDB } from './core/storage/db.js';
 import { Router } from './core/router.js';
 import { renderTabBar } from './shared/TabBar/index.js';
 
-function bootstrap() {
+async function bootstrapApp() {
   renderTabBar(document.body);
+
+  await initDB();
 
   const router = new Router({
     root: document.getElementById('app-root'),
@@ -18,4 +21,4 @@ function bootstrap() {
   router.start();
 }
 
-bootstrap();
+bootstrapApp();
