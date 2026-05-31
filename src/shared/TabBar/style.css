@@ -1,0 +1,47 @@
+.tab-bar {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0.65rem max(1rem, env(safe-area-inset-left)) max(0.65rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-right));
+  background: var(--color-surface);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -16px 36px rgba(0, 0, 0, 0.24);
+}
+
+.tab-bar button {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  padding: 0.7rem 0.5rem;
+  text-align: center;
+  transition:
+    color 160ms ease,
+    text-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.tab-bar button:hover,
+.tab-bar button:focus-visible {
+  color: var(--color-accent);
+}
+
+.tab-bar button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 0.2rem;
+}
+
+.tab-bar button.active {
+  color: var(--color-accent);
+  text-shadow: 0 0 12px rgba(255, 0, 127, 0.7), 0 0 28px rgba(255, 0, 127, 0.38);
+  transform: translateY(-0.08rem);
+}
