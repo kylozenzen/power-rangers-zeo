@@ -1,16 +1,36 @@
+import './style.css';
+import { setupFormLogic } from './logic.js';
+
 export function init(container) {
   container.innerHTML = `
-    <main
-      class="build-shell"
-      aria-labelledby="build-title"
-      style="display: grid; min-height: 100vh; min-height: 100dvh; place-items: center; padding: 2rem 2rem 6rem; text-align: center;"
-    >
-      <div
-        id="build-title"
-        style="background: var(--infinity-gradient); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; font-size: clamp(2rem, 12vw, 4.5rem); font-weight: 900; letter-spacing: -0.06em; line-height: 1; text-shadow: 0 0 32px rgba(0, 210, 255, 0.28), 0 0 64px rgba(154, 75, 255, 0.24), 0 0 96px rgba(255, 0, 127, 0.2);"
-      >
-        Build Workout Engine coming soon
-      </div>
+    <main class="build-shell" aria-labelledby="build-title">
+      <form class="workout-form" data-workout-form>
+        <h1 id="build-title" class="workout-form__title">Log an Exercise</h1>
+
+        <div class="workout-field">
+          <label for="exercise-name">Exercise Name</label>
+          <input id="exercise-name" name="exerciseName" type="text" placeholder="Back Squat" required />
+        </div>
+
+        <div class="workout-field">
+          <label for="exercise-weight">Weight (lbs)</label>
+          <input id="exercise-weight" name="weight" type="number" min="0" step="0.5" placeholder="225" required />
+        </div>
+
+        <div class="workout-field">
+          <label for="exercise-sets">Sets</label>
+          <input id="exercise-sets" name="sets" type="number" min="1" step="1" placeholder="5" required />
+        </div>
+
+        <div class="workout-field">
+          <label for="exercise-reps">Reps</label>
+          <input id="exercise-reps" name="reps" type="number" min="1" step="1" placeholder="5" required />
+        </div>
+
+        <button class="save-btn" type="submit">SAVE TO LOCAL STORAGE</button>
+      </form>
     </main>
   `;
+
+  setupFormLogic(container);
 }
