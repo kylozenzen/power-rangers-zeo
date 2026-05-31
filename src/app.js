@@ -1,3 +1,5 @@
+import './core/theme/global.css';
+import './core/theme/infinity.css';
 import { Router } from './core/router.js';
 import { renderTabBar } from './shared/TabBar/index.js';
 
